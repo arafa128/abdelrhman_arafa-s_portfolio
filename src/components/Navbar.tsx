@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollTo } from "@/hooks/use-scroll-to";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#experience" },
-  { name: "Projects", href: "#projects" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Skills", id: "skills" },
+  { name: "Experience", id: "experience" },
+  { name: "Projects", id: "projects" },
+  { name: "Contact", id: "contact" },
 ];
 
 export const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const scrollTo = useScrollTo();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,23 +45,23 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a
-            href="#home"
+          <button
+            onClick={() => scrollTo('home')}
             className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           >
             AA
-          </a>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => scrollTo(item.id)}
                 className="text-foreground/80 hover:text-accent transition-colors duration-300 font-medium"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </div>
 
@@ -97,14 +99,16 @@ export const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 animate-fade-in">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="block py-2 text-foreground/80 hover:text-accent transition-colors duration-300"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  scrollTo(item.id);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="block w-full text-left py-2 text-foreground/80 hover:text-accent transition-colors duration-300"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </div>
         )}
