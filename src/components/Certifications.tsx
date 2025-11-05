@@ -5,14 +5,17 @@ const certifications = [
   {
     name: "AUTOSAR Master Class",
     issuer: "Sprints",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7187000144414855168/",
   },
   {
     name: "Overview of Automotive SPICE",
     issuer: "EDUCBA",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7198609741432946689/",
   },
   {
     name: "Product Management",
     issuer: "Sprints",
+    link: "https://www.linkedin.com/posts/abdelrhman-arafa_im-happy-to-share-that-ive-obtained-a-new-activity-7377343626789593089-ftx3/",
   },
 ];
 
@@ -26,16 +29,23 @@ export const Certifications = () => {
 
         <div className="max-w-3xl mx-auto grid md:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
-            <Card
+            <a
               key={index}
-              className="border-accent/20 hover:border-accent/50 transition-all duration-300 hover:scale-105 text-center"
+              href={cert.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block no-underline hover:no-underline"
             >
-              <CardContent className="p-6">
-                <Award className="h-12 w-12 mx-auto mb-4 text-accent" />
-                <h3 className="font-semibold text-lg mb-2">{cert.name}</h3>
-                <p className="text-sm text-muted-foreground">{cert.issuer}</p>
-              </CardContent>
-            </Card>
+              <Card
+                className="border-accent/20 hover:border-accent/50 transition-all duration-300 hover:scale-105 text-center cursor-pointer h-full"
+              >
+                <CardContent className="p-6 flex flex-col items-center justify-center h-full min-h-[200px]">
+                  <Award className="h-12 w-12 mb-4 text-accent" />
+                  <h3 className="font-semibold text-lg mb-2">{cert.name}</h3>
+                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                </CardContent>
+              </Card>
+            </a>
           ))}
         </div>
       </div>

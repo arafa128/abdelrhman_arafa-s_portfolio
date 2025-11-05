@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,25 +7,34 @@ import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const form = e.target as HTMLFormElement;
+    try {
+      const response = await fetch("https://formspree.io/f/mrbongny", {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -38,7 +46,7 @@ export const Contact = () => {
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <Card className="border-accent/20">
+          <Card className="border-accent/20 h-fit">
             <CardHeader>
               <CardTitle>Send a Message</CardTitle>
             </CardHeader>
@@ -48,8 +56,6 @@ export const Contact = () => {
                   <Input
                     name="name"
                     placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -58,8 +64,6 @@ export const Contact = () => {
                     name="email"
                     type="email"
                     placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -67,8 +71,6 @@ export const Contact = () => {
                   <Textarea
                     name="message"
                     placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
                     rows={5}
                     required
                   />
@@ -85,11 +87,11 @@ export const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6">
-            <Card className="border-accent/20 hover:border-accent/50 transition-colors">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <Mail className="h-8 w-8 text-accent" />
+          <div className="grid gap-6 content-start">
+            <Card className="border-accent/20 hover:border-accent/50 transition-colors h-[100px]">
+              <CardContent className="p-6 h-full">
+                <div className="flex items-center gap-4 h-full">
+                  <Mail className="h-8 w-8 text-accent flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
                     <a
@@ -103,10 +105,10 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-accent/20 hover:border-accent/50 transition-colors">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4">
-                  <MapPin className="h-8 w-8 text-accent" />
+            <Card className="border-accent/20 hover:border-accent/50 transition-colors h-[100px]">
+              <CardContent className="p-6 h-full">
+                <div className="flex items-center gap-4 h-full">
+                  <MapPin className="h-8 w-8 text-accent flex-shrink-0" />
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-muted-foreground">Giza, Egypt</p>
@@ -115,28 +117,32 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-accent/20 hover:border-accent/50 transition-colors">
-              <CardContent className="p-6">
-                <h3 className="font-semibold mb-4">Connect With Me</h3>
-                <div className="flex gap-4">
-                  <a
-                    href="https://github.com/arafa128"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-foreground/70 hover:text-accent transition-all duration-300 hover:scale-110"
-                  >
-                    <Github className="h-6 w-6" />
-                    <span>GitHub</span>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/abdelrhman-arafa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-foreground/70 hover:text-accent transition-all duration-300 hover:scale-110"
-                  >
-                    <Linkedin className="h-6 w-6" />
-                    <span>LinkedIn</span>
-                  </a>
+            <Card className="border-accent/20 hover:border-accent/50 transition-colors h-[100px]">
+              <CardContent className="p-6 h-full">
+                <div className="flex items-center gap-4 h-full">
+                  <div className="flex-grow">
+                    <h3 className="font-semibold mb-2">Connect With Me</h3>
+                    <div className="flex gap-4">
+                      <a
+                        href="https://github.com/arafa128"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-foreground/70 hover:text-accent transition-all duration-300 hover:scale-110"
+                      >
+                        <Github className="h-6 w-6" />
+                        <span>GitHub</span>
+                      </a>
+                      <a
+                        href="https://www.linkedin.com/in/abdelrhman-arafa/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-foreground/70 hover:text-accent transition-all duration-300 hover:scale-110"
+                      >
+                        <Linkedin className="h-6 w-6" />
+                        <span>LinkedIn</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
