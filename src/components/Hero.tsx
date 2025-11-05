@@ -41,9 +41,17 @@ export const Hero = () => {
             <Button
               size="lg"
               className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
+              asChild
             >
-              <Download className="mr-2 h-5 w-5" />
-              Download CV
+              <a
+                href="https://drive.google.com/file/d/1g0N0FIn9ySbubILrSrqoubWqPm9Hb1qa/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV
+              </a>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <a href="#contact">Contact Me</a>
