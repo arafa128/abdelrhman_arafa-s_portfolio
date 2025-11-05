@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X, FileDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollTo } from "@/hooks/use-scroll-to";
 
@@ -66,6 +66,24 @@ export const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-4">
+            {/* Download CV Button */}
+            <Button
+              variant="ghost"
+              size="default"
+              asChild
+              className="hidden md:flex gap-2"
+            >
+              <a
+                href="https://drive.google.com/file/d/1g0N0FIn9ySbubILrSrqoubWqPm9Hb1qa/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                <FileDown className="h-4 w-4" />
+                <span>CV</span>
+              </a>
+            </Button>
+
             <Button
               variant="ghost"
               size="icon"
@@ -110,6 +128,17 @@ export const Navbar = () => {
                 {item.name}
               </button>
             ))}
+            {/* Mobile CV Download */}
+            <a
+              href="https://drive.google.com/file/d/1g0N0FIn9ySbubILrSrqoubWqPm9Hb1qa/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 py-2 text-foreground/80 hover:text-accent transition-colors duration-300"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <FileDown className="h-4 w-4" />
+              <span>Download CV</span>
+            </a>
           </div>
         )}
       </div>
