@@ -10,8 +10,8 @@ const techStack = [
   "Linux",
   "UML",
   "Git",
-  "DevOps",
-  "Embedded Systems",
+  "Jira",
+  "Embedded Android",
 ];
 
 export const About = () => {
@@ -26,14 +26,13 @@ export const About = () => {
           <Card className="mb-12 border-accent/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardContent className="p-8">
               <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                Passionate Software Engineer with strong focus on Linux OS and
-                experience in Embedded Systems, SDLC, STLC, C/C++, Yocto, Docker,
-                Git, and ASPICE. Proven collaboration with top automotive OEMs such
-                as Ferrari and Aston Martin.
+                Passionate Software Engineer with strong focus on LINUX OS experienced in Embedded systems,
+                SDLC,STLC processes, C, Cpp,Yocto, Docker, Git,and ASPICE .with a proven track record of collaboration
+                with top OEMs such as Ferrari and Aston Martin.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
                 Excited about creating efficient, scalable solutions and
-                continuously improving skills in the software industry.
+                continuously improving my skills in the software industry.
               </p>
             </CardContent>
           </Card>
@@ -44,25 +43,25 @@ export const About = () => {
                 <Code2 className="h-12 w-12 mx-auto mb-4 text-primary" />
                 <h3 className="font-semibold text-lg mb-2">Programming</h3>
                 <p className="text-sm text-muted-foreground">
-                  Proficient in multiple languages
+                  C, C++, Python, Shell Scripting
                 </p>
               </CardContent>
             </Card>
             <Card className="border-accent/20 hover:border-accent/50 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
                 <Server className="h-12 w-12 mx-auto mb-4 text-accent" />
-                <h3 className="font-semibold text-lg mb-2">DevOps</h3>
+                <h3 className="font-semibold text-lg mb-2">Requirement Engineering</h3>
                 <p className="text-sm text-muted-foreground">
-                  Docker, Kubernetes, CI/CD
+                  Jira, Clickup, Requirement Analysis & Management
                 </p>
               </CardContent>
             </Card>
             <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
                 <Cpu className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <h3 className="font-semibold text-lg mb-2">Embedded</h3>
+                <h3 className="font-semibold text-lg mb-2">Embedded Systems</h3>
                 <p className="text-sm text-muted-foreground">
-                  Automotive & IoT Systems
+                  Automotive, Linux & Embedded Android Systems
                 </p>
               </CardContent>
             </Card>

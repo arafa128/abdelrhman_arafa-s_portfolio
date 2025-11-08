@@ -3,19 +3,28 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
+    title: "Software Engineer",
+    company: "Freelance",
+    period: "Sep 2025 – Present",
+    description:
+      "Developing POS systems, focusing on reliability and user experience.",
+    tools: "PHP, Laravel, MySQL",
+  },
+  {
     title: "Teaching Assistant",
     company: "Zewail City of Science and Technology",
     period: "Feb 2025 – Jun 2025",
     description:
       "Taught Embedded Systems and C++ material. Developed and guided students through practical applications and labs.",
+    tools: "C++, Embedded Systems",
   },
   {
     title: "Embedded Automotive Software Engineer",
     company: "Methode Electronics",
     period: "Jun 2022 – May 2024",
     description:
-      "Created CANalyzer configurations and CAPL scripts for OEMs like AML & Ferrari. Designed UML diagrams, SRS, SDD, and SHLD documents. Worked on ASIL-B safety-critical systems, diagnostics, and ECU layer modules.",
-    tools: "LDRA, TESSY, CANoe, CAPL, UML",
+      "Developed and validated automotive embedded software for multiple OEMs (e.g., AML, Ferrari), including CAPL-based CANalyzer configurations, multi-MCU modules (Atmel SAMD, dsPIC), diagnostics, and safety features (ASIL-B); collaborated with hardware, EOL, and testing teams on documentation (SRS, SDD, SHLD), UML design, test planning, and unit testing using TESSY and LDRA.",
+    tools: "C, FMEA, LDRA, TESSY, CANoe, CAPL, UML",
   },
   {
     title: "Embedded Linux Engineer",
@@ -23,6 +32,7 @@ const experiences = [
     period: "Nov 2022 – Jan 2023",
     description:
       "Developed surgical room control GUI using Qt and Python on Raspberry Pi with touchscreen.",
+    tools: "Python, QT, Raspberry Pi",
   },
   {
     title: "Embedded System Engineer Intern",

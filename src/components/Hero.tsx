@@ -29,12 +29,12 @@ export const Hero = () => {
             Abdelrhman Arafa
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground/90">
-            Software Engineer | Embedded Systems & DevOps
+            Embedded Systems | Requirement & Software Engineer
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Results-driven Software Engineer with hands-on experience in embedded
-            systems, Linux, and DevOps. Passionate about building scalable,
-            efficient software and delivering reliable embedded solutions.
+            Results-driven Requirement Engineer with hands-on experience in embedded
+            systems, Linux, and Software Engineering. Passionate about building scalable,
+            efficient software and delivering reliable Software solutions.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-8">
@@ -53,9 +53,9 @@ export const Hero = () => {
                 Download CV
               </a>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            {/* <Button size="lg" variant="outline" asChild>
               <a href="#contact">Contact Me</a>
-            </Button>
+            </Button> */}
           </div>
 
           <div className="flex gap-6 justify-center">

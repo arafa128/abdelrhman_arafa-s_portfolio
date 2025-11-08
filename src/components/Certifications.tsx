@@ -17,6 +17,11 @@ const certifications = [
     issuer: "Sprints",
     link: "https://www.linkedin.com/posts/abdelrhman-arafa_im-happy-to-share-that-ive-obtained-a-new-activity-7377343626789593089-ftx3/",
   },
+  {
+    name: "Requirements Engineering",
+    issuer: "Udemy",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7392859207051440128/",
+  },
 ];
 
 export const Certifications = () => {
@@ -27,7 +32,7 @@ export const Certifications = () => {
           Certifications & Learning
         </h2>
 
-        <div className="max-w-3xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {certifications.map((cert, index) => (
             <a
               key={index}

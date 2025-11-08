@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Github, Linkedin, Send } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Send, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const Contact = () => {
@@ -140,6 +140,15 @@ export const Contact = () => {
                       >
                         <Linkedin className="h-6 w-6" />
                         <span>LinkedIn</span>
+                      </a>
+                      <a
+                        href="tel:00201022330582"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-foreground/70 hover:text-accent transition-all duration-300 hover:scale-110"
+                      >
+                        <Phone className="h-6 w-6" />
+                        <span>00201022330582</span>
                       </a>
                     </div>
                   </div>

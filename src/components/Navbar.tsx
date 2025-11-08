@@ -49,7 +49,7 @@ export const Navbar = () => {
             onClick={() => scrollTo('home')}
             className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           >
-            AA
+            Portfolio.
           </button>
 
           {/* Desktop Navigation */}

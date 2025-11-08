@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Terminal, Wrench } from "lucide-react";
+import { Code, Terminal, Wrench, SquareChartGantt } from "lucide-react";
 
 const skillCategories = [
   {
@@ -13,7 +13,7 @@ const skillCategories = [
       "PHP",
       "Laravel",
       "OOP",
-      "SQL",
+      "GIT/GITGUB",
       "Modern C++",
       "ARM Architecture",
       "FreeRTOS",
@@ -26,28 +26,41 @@ const skillCategories = [
     skills: [
       "Yocto",
       "Docker",
-      "Kubernetes",
+      "GDB",
       "Shell/Bash scripting",
       "U-Boot",
       "CI/CD",
       "Process Management",
       "System Monitoring",
+      "Controls Redirection",
     ],
   },
   {
     title: "Other Skills",
-    icon: Wrench,
+    icon: SquareChartGantt,
     color: "text-primary",
     skills: [
       "UML",
       "ASPICE",
-      "UDS",
-      "SOMEIP",
+      "UDS/Diagnostics",
+      "FMEA",
       "Functional Safety (ISO26262)",
       "Unit & Integration Testing",
       "Jira",
       "Agile/Scrum",
-      "Design Patterns",
+      "Product Owner",
+    ],
+  },
+    {
+    title: "Tools & Technologies",
+    icon: Wrench,
+    color: "text-primary",
+    skills: [
+      "Vector CANoe/CAPL",
+      "Vector CANalyzer",
+      "TESSY",
+      "LDRA",
+      "DTP",
     ],
   },
 ];
@@ -57,10 +70,10 @@ export const Skills = () => {
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          Skills & Expertise
+          Skills, Tools & Expertise
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
             <Card
               key={category.title}
