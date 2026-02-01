@@ -3,64 +3,37 @@ import { Code, Terminal, Wrench, SquareChartGantt } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Programming",
+    title: "Product & PM Skills",
     icon: Code,
     color: "text-primary",
     skills: [
-      "C",
-      "C++",
-      "Python",
-      "PHP",
-      "Laravel",
-      "OOP",
-      "GIT/GITGUB",
-      "Modern C++",
-      "ARM Architecture",
-      "FreeRTOS",
+      "Product Ownership",
+      "Requirements Engineering",
+      "Jira",
+      "ASPICE",
+      "Stakeholder Management",
+      "Acceptance Criteria",
+      "User Stories",
+      "Agile / Scrum",
+      "Roadmapping & Prioritization",
     ],
   },
   {
-    title: "Linux & DevOps",
-    icon: Terminal,
-    color: "text-accent",
+    title: "Technical Background",
+    icon: Code,
+    color: "text-primary",
     skills: [
       "Yocto",
+      "C++ / Python / PHP / SQL",
       "Docker",
-      "GDB",
-      "Shell/Bash scripting",
-      "U-Boot",
+      "ISO 26262 / Functional Safety",
+      "GIT/GITGUB",
+      "ARM Architecture",
+      "FreeRTOS",
+      "Shell / Bash scripting",
       "CI/CD",
-      "Process Management",
-      "System Monitoring",
-      "Controls Redirection",
-    ],
-  },
-  {
-    title: "Other Skills",
-    icon: SquareChartGantt,
-    color: "text-primary",
-    skills: [
-      "UML",
-      "ASPICE",
-      "UDS/Diagnostics",
+      "AUTOSAR",
       "FMEA",
-      "Functional Safety (ISO26262)",
-      "Unit & Integration Testing",
-      "Jira",
-      "Agile/Scrum",
-      "Product Owner",
-    ],
-  },
-    {
-    title: "Tools & Technologies",
-    icon: Wrench,
-    color: "text-primary",
-    skills: [
-      "Vector CANoe/CAPL",
-      "Vector CANalyzer",
-      "TESSY",
-      "LDRA",
-      "DTP",
     ],
   },
 ];
@@ -73,7 +46,7 @@ export const Skills = () => {
           Skills, Tools & Expertise
         </h2>
 
-        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3">
           {skillCategories.map((category, index) => (
             <Card
               key={category.title}

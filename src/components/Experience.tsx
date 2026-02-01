@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Software Engineer",
     company: "Freelance",
-    period: "Sep 2025 – Present",
+    period: "Sep 2025 – Dec 2025",
     description:
       "Developing POS systems, focusing on reliability and user experience.",
     tools: "PHP, Laravel, MySQL",
@@ -15,7 +15,7 @@ const experiences = [
     company: "Zewail City of Science and Technology",
     period: "Feb 2025 – Jun 2025",
     description:
-      "Taught Embedded Systems and C++ material. Developed and guided students through practical applications and labs.",
+      "Delivered structured technical content and adapted course material based on feedback and learning outcomes ,Simplified complex technical concepts into clear explanations, strengthening communication and stakeholder-alignment skills",
     tools: "C++, Embedded Systems",
   },
   {
@@ -23,7 +23,7 @@ const experiences = [
     company: "Methode Electronics",
     period: "Jun 2022 – May 2024",
     description:
-      "Developed and validated automotive embedded software for multiple OEMs (e.g., AML, Ferrari), including CAPL-based CANalyzer configurations, multi-MCU modules (Atmel SAMD, dsPIC), diagnostics, and safety features (ASIL-B); collaborated with hardware, EOL, and testing teams on documentation (SRS, SDD, SHLD), UML design, test planning, and unit testing using TESSY and LDRA.",
+      "Collaborated with cross-functional teams (software, hardware, validation, production, EOL) to deliver automotive ECUs for multiple OEMs, including Ferrari and Aston Martin Owned the creation and maintenance of product and system documentation (SRS, SDD, SHLD, UML, flowcharts, release notes), ensuring alignment between stakeholder expectations and engineering delivery Worked closely with validation teams to define test plans, test cases, and acceptance criteria,supporting system-level integration and quality assurance Contributed to ASIL-B safety-critical projects, applying ISO 26262 principles to risk assessment, functional safety requirements, and mitigation strategies Translated OEM and system-level requirements into clear functional and non-functional specifications consumable by development and validation teams Supported production readiness by coordinating requirement clarification and issue resolution with EOL and manufacturing teams Worked in Agile/Scrum environments using Jira to track requirements, delivery progress, and cross-team dependencies",
     tools: "C, FMEA, LDRA, TESSY, CANoe, CAPL, UML",
   },
   {
@@ -31,7 +31,7 @@ const experiences = [
     company: "Freelance",
     period: "Nov 2022 – Jan 2023",
     description:
-      "Developed surgical room control GUI using Qt and Python on Raspberry Pi with touchscreen.",
+      "Prioritized features to deliver an MVP that met core user needs while respecting technical and time constraints .Delivered a Surgical Room Control System based on stakeholder and user requirements using Linux, Raspberry Pi, QT, and Python. Collaborated with stakeholders to define system behavior, UI expectations, and operational constraints.",
     tools: "Python, QT, Raspberry Pi",
   },
   {

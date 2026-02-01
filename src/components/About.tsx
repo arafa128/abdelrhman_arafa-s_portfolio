@@ -2,16 +2,20 @@ import { Code2, Server, Cpu } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const techStack = [
-  "C",
+  "Agile",
+  "Scrum",
+  "ASPICE",
+  "ISO 26262",
+  "Requirement Engineering",
+  "UML",
+  "Jira",
+  "Clickup",
+  "CI/CD",
   "C++",
   "Python",
-  "Yocto",
   "Docker",
   "Linux",
-  "UML",
   "Git",
-  "Jira",
-  "Embedded Android",
 ];
 
 export const About = () => {
@@ -26,13 +30,13 @@ export const About = () => {
           <Card className="mb-12 border-accent/20 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <CardContent className="p-8">
               <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                Passionate Software Engineer with strong focus on LINUX OS experienced in Embedded systems,
-                SDLC,STLC processes, C, Cpp,Yocto, Docker, Git,and ASPICE .with a proven track record of collaboration
-                with top OEMs such as Ferrari and Aston Martin.
+                I’m a Technical Product Manager / Product Owner with a strong engineering foundation in embedded and automotive systems.
+                I specialize in translating complex technical and business requirements into clear, actionable product specifications that align engineering execution with customer and stakeholder needs.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
-                Excited about creating efficient, scalable solutions and
-                continuously improving my skills in the software industry.
+                I’ve worked across the full product lifecycle—from requirements discovery and definition to system validation and release—within Agile, ASPICE, and ISO 26262 safety-critical environments.
+                My experience includes close collaboration with cross-functional teams and global automotive OEMs such as Ferrari and Aston Martin.
+                With hands-on technical experience and formal training in Product Management and Requirements Engineering, I bridge the gap between business goals and engineering reality to deliver reliable, high-impact products.
               </p>
             </CardContent>
           </Card>
@@ -41,9 +45,9 @@ export const About = () => {
             <Card className="border-primary/20 hover:border-primary/50 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
                 <Code2 className="h-12 w-12 mx-auto mb-4 text-primary" />
-                <h3 className="font-semibold text-lg mb-2">Programming</h3>
+                <h3 className="font-semibold text-lg mb-2">Product Management</h3>
                 <p className="text-sm text-muted-foreground">
-                  C, C++, Python, Shell Scripting
+                  Agile, Scrum, ASPICE, ISO 26262 & Stakeholder Management Roadmapping & Prioritization User Stories Acceptance Criteria
                 </p>
               </CardContent>
             </Card>

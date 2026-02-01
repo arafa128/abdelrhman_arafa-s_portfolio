@@ -3,16 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const certifications = [
   {
-    name: "AUTOSAR Master Class",
-    issuer: "Sprints",
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7187000144414855168/",
-  },
-  {
-    name: "Overview of Automotive SPICE",
-    issuer: "EDUCBA",
-    link: "https://www.linkedin.com/feed/update/urn:li:activity:7198609741432946689/",
-  },
-  {
     name: "Product Management",
     issuer: "Sprints",
     link: "https://www.linkedin.com/posts/abdelrhman-arafa_im-happy-to-share-that-ive-obtained-a-new-activity-7377343626789593089-ftx3/",
@@ -21,6 +11,16 @@ const certifications = [
     name: "Requirements Engineering",
     issuer: "Udemy",
     link: "https://www.linkedin.com/feed/update/urn:li:activity:7392859207051440128/",
+  },
+  {
+    name: "AUTOSAR Master Class",
+    issuer: "Sprints",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7187000144414855168/",
+  },
+  {
+    name: "Overview of Automotive SPICE",
+    issuer: "EDUCBA",
+    link: "https://www.linkedin.com/feed/update/urn:li:activity:7198609741432946689/",
   },
 ];
 

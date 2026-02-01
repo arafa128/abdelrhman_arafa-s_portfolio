@@ -29,12 +29,12 @@ export const Hero = () => {
             Abdelrhman Arafa
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground/90">
-            Embedded Systems | Requirement & Software Engineer
+            Product Manager | Requirement & Software Engineer
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Results-driven Requirement Engineer with hands-on experience in embedded
-            systems, Linux, and Software Engineering. Passionate about building scalable,
-            efficient software and delivering reliable Software solutions.
+            Technical Product Manager / Product Owner with a strong engineering foundation in embedded and automotive systems.
+            I specialize in translating complex technical and business requirements into clear, actionable product specifications that align engineering execution with customer and stakeholder needs.
+
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-8">
@@ -44,7 +44,7 @@ export const Hero = () => {
               asChild
             >
               <a
-                href="https://drive.google.com/file/d/1s5At7osi5j3Jic-IJiKF4Z36Q10g2U-o/view?usp=sharing"
+                href="https://drive.google.com/file/d/113bgXCDap_Qdk01KBharj1gX9VNDGKoI/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center"
